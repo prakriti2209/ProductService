@@ -21,7 +21,7 @@ public class ProductController {
         return ResponseEntity.ok(product);
     }
     @GetMapping
-    @PreAuthorize("hasAnyRole(\"ADMIN\")")
+    @PreAuthorize("hasAnyRole(\"ADMIN\",\"USER\")")
     public ResponseEntity<?> geAll(){
       List<Products> productlist= this.productService.getAllproducts();
         return ResponseEntity.ok(productlist);
