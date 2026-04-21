@@ -1,8 +1,7 @@
 Product Service — Ecommerce Backend
 
-This is the product management service of my e-commerce microservices project.
-Main project: https://github.com/prakriti2209/Ecommerce-Microservices
-
+This is the product management service of Ecommerce-project.
+Main project:https://github.com/prakriti2209/Ecommerce-project.git
 What it does:
 Admin can add, update and delete products.
 Users can view all available products.
