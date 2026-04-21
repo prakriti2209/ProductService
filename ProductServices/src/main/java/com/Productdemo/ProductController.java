@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class ProductController {
 
     @PostMapping
     @PreAuthorize("hasAnyRole(\"ADMIN\")")
-    public ResponseEntity<?> save(ProductDto product){
+    public ResponseEntity<?> save(@RequestBody ProductDto product){
         this.productService.save(product);
         return ResponseEntity.ok(product);
     }
